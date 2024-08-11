@@ -8,3 +8,8 @@ After copy the service:
 ```
 sudo cp ./qmk_oled.service /etc/systemd/system/qmk_oled.service
 ```
+
+```
+sudo systemctl enable qmk_oled
+sudo systemctl start qmk_oled
+```
