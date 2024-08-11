@@ -1,15 +1,18 @@
 # Send system informations to custom QMK based keyboard.
-[https://github.com/lnxx-56/qmk_firmware](Link to custom keymap containing the OLED configurations)
+[Link to custom keymap containing the OLED configurations](https://github.com/lnxx-56/qmk_firmware)
 
 ## Use as systemd service
 Need to change the execution path for your own path
 
-After copy the service:
+Install the service as User service (NOT ROOT):
+- Create user service folder if not present
 ```
-sudo cp ./qmk_oled.service /etc/systemd/system/qmk_oled.service
+mkdir ~/.config/systemd/user
+```
+```
+cp ./qmk_oled.service ~/.config/systemd/user/qmk_oled.service
 ```
 
 ```
-sudo systemctl enable qmk_oled
-sudo systemctl start qmk_oled
+systemctl --user enable qmk_oled.service
 ```
