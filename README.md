@@ -4,6 +4,11 @@
 ## Use as systemd service
 Need to change the execution path for your own path
 
+## For Ubuntu install
+```
+sudo apt install libasound2-dev
+```
+
 Install the service as User service (NOT ROOT):
 - Create user service folder if not present
 ```
